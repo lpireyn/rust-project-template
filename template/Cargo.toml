@@ -12,7 +12,6 @@ version = "0.1.0"
 authors = ["TBD: Author"]
 edition = "2024"
 rust-version = "1.95.0"
-documentation = "TBD: Documentation URL"
 readme = true
 homepage = "TBD: Homepage URL"
 repository = "TBD: Repository URL"
