@@ -1,0 +1,63 @@
+# Cargo workspace manifest
+# https://doc.rust-lang.org/cargo/reference/workspaces.html
+
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+# Inheritable package configuration
+# https://doc.rust-lang.org/cargo/reference/workspaces.html#the-package-table
+[workspace.package]
+version = "0.1.0"
+authors = ["TBD: Author"]
+edition = "2024"
+rust-version = "1.95.0"
+documentation = "TBD: Documentation URL"
+readme = true
+homepage = "TBD: Homepage URL"
+repository = "TBD: Repository URL"
+# TBD: If you want a different licensing model, modify this accordingly
+license = "MIT OR Apache-2.0"
+
+# Inheritable dependencies
+# https://doc.rust-lang.org/cargo/reference/workspaces.html#the-dependencies-table
+[workspace.dependencies]
+# TBD: Library name
+tbd_lib = { path = "crates/tbd-lib" }
+
+# Lints
+# https://doc.rust-lang.org/cargo/reference/manifest.html#the-lints-section
+
+# Clippy lints
+# https://rust-lang.github.io/rust-clippy/stable/index.html
+[workspace.lints.clippy]
+correctness = "warn"
+suspicious = "warn"
+complexity = "warn"
+perf = "warn"
+style = "warn"
+pedantic = "warn"
+cargo = "warn"
+
+# Profiles
+# https://doc.rust-lang.org/cargo/reference/profiles.html
+
+# Development profile
+# https://doc.rust-lang.org/cargo/reference/profiles.html#dev
+[profile.dev]
+
+# Release profile
+# https://doc.rust-lang.org/cargo/reference/profiles.html#release
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
+
+# Test profile
+# https://doc.rust-lang.org/cargo/reference/profiles.html#test
+[profile.test]
+
+# Benchmark profile
+# https://doc.rust-lang.org/cargo/reference/profiles.html#bench
+[profile.bench]

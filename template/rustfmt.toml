@@ -1,0 +1,12 @@
+# rustfmt configuration
+# https://rust-lang.github.io/rustfmt/
+
+edition = "2024"
+style_edition = "2024"
+newline_style = "Unix"
+
+# TBD: You may want to remove this section if you want to use stable features only
+# Unstable features
+unstable_features = true
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
