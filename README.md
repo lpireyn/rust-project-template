@@ -18,6 +18,7 @@ My slightly opinionated template for Rust projects of any size.
 - rustfmt configuration
 - Git configuration
 - EditorConfig configuration
+- GitHub workflows
 
 ## Usage
 
